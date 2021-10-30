@@ -1,9 +1,11 @@
 package co.com.k4soft.clienteapijava.model;
 
+import java.io.Serializable;
+
 import lombok.Data;
 
 @Data
-public class Persona {
+public class Persona implements Serializable {
 
     private Integer idPersona;
     private String numeroDocumento;

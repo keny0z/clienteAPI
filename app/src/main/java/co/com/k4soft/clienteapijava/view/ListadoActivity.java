@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -85,6 +87,18 @@ public class ListadoActivity extends AppCompatActivity implements PersonaStrateg
     private void cargarAdapter() {
         personaBaseAdapter = new PersonaBaseAdapter(this,listaPersonas);
         listViewPersonas.setAdapter(personaBaseAdapter);
+        hacerItemsClickeables(listViewPersonas);
+
+    }
+
+    private void hacerItemsClickeables(ListView listViewPersonas){
+        listViewPersonas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Persona personaSeleccionada = (Persona) personaBaseAdapter.getItem(position);
+                abrirActualizarPersona(personaSeleccionada);
+            }
+        });
     }
 
     private void initComponents() {
@@ -135,6 +149,13 @@ public class ListadoActivity extends AppCompatActivity implements PersonaStrateg
 
     private void abrirFormularioRegistro(){
         Intent intent = new Intent(this, RegistroActivity.class);
+        startActivity(intent);
+    }
+    private void abrirActualizarPersona(Persona persona){
+        Intent intent = new Intent(this, ActualizarActivity.class);
+
+        intent.putExtra("persona",persona);
+
         startActivity(intent);
     }
 }

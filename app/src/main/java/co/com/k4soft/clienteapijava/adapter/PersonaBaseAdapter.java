@@ -51,6 +51,7 @@ public class PersonaBaseAdapter extends BaseAdapter implements Filterable {
             holder.nombre = convertView.findViewById(R.id.nombre);
             holder.documento = convertView.findViewById(R.id.documento);
             convertView.setTag(holder);
+            //
         } else {
             holder = (ViewHolder) convertView.getTag();
         }

@@ -1,9 +1,11 @@
 package co.com.k4soft.clienteapijava.model;
 
+import java.io.Serializable;
+
 import lombok.Data;
 
 @Data
-public class TipoDocumento {
+public class TipoDocumento implements Serializable {
 
     private Integer idTipoDocumento;
     private String nombreDocumento;
