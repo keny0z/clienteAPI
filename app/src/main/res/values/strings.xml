@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Cliente API java</string>
+    <string name="welcome">Bienvenido al sistema de registro de personas</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="digite_usuario">Digite un usuario</string>
+    <string name="digite_password">Digite un password</string>
+    <string name="bad_credencials">Credenciales no válidas</string>
+    <string name="sin_personas">no hay personas registradas</string>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Web service client</string>
+    <string name="listado_estudiantes">Listado de estudiantes</string>
+    <string name="sin_estudiantes">No existe información en el sistema</string>
+    <string name="cargando_estudiantes">Cargando estudiantes</string>
+    <string name="success_comunication">Comunicación exitosa</string>
+</resources>
