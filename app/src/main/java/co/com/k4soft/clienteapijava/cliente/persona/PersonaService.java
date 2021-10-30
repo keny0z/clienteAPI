@@ -6,29 +6,18 @@ import android.widget.Toast;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.google.gson.Gson;
-
-import java.lang.reflect.Type;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import co.com.k4soft.clienteapijava.LoginStrategy;
-import co.com.k4soft.clienteapijava.PersonaStrategy;
 import co.com.k4soft.clienteapijava.R;
-import co.com.k4soft.clienteapijava.cliente.Service;
 import co.com.k4soft.clienteapijava.cliente.util.RetrofitFactory;
 import co.com.k4soft.clienteapijava.model.Persona;
-import co.com.k4soft.clienteapijava.model.security.LoginResponse;
-import co.com.k4soft.clienteapijava.util.GlobalState;
-import co.com.k4soft.clienteapijava.util.ListaPersonas;
 import co.com.k4soft.clienteapijava.util.Parametro;
 import okhttp3.OkHttpClient;
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class PersonaService extends RetrofitFactory {
     private Context context;

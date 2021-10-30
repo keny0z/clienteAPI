@@ -1,19 +1,14 @@
 package co.com.k4soft.clienteapijava.view;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.ButtonBarLayout;
-import androidx.lifecycle.LiveData;
 
-import co.com.k4soft.clienteapijava.PersonaStrategy;
+import co.com.k4soft.clienteapijava.cliente.persona.PersonaStrategy;
 import co.com.k4soft.clienteapijava.R;
 import co.com.k4soft.clienteapijava.cliente.persona.PersonaService;
-import co.com.k4soft.clienteapijava.model.Persona;
 
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-
-import java.util.List;
 
 public class RegistroActivity extends AppCompatActivity implements PersonaStrategy {
     EditText etNombre;
@@ -29,6 +24,7 @@ public class RegistroActivity extends AppCompatActivity implements PersonaStrate
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
         initComponents();
+
     }
     private void initComponents() {
         etNombre = findViewById(R.id.etNombre);

@@ -1,15 +1,12 @@
-package co.com.k4soft.clienteapijava.cliente.impl;
+package co.com.k4soft.clienteapijava.cliente.login;
 
 import android.content.Context;
 import android.util.Base64;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 
 import java.lang.reflect.Type;
 
-import co.com.k4soft.clienteapijava.LoginStrategy;
-import co.com.k4soft.clienteapijava.R;
 import co.com.k4soft.clienteapijava.cliente.Service;
 import co.com.k4soft.clienteapijava.cliente.util.RetrofitFactory;
 import co.com.k4soft.clienteapijava.model.security.LoginResponse;

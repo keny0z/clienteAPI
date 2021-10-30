@@ -1,4 +1,4 @@
-package co.com.k4soft.clienteapijava;
+package co.com.k4soft.clienteapijava.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,8 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import co.com.k4soft.clienteapijava.R;
 import co.com.k4soft.clienteapijava.cliente.Service;
-import co.com.k4soft.clienteapijava.cliente.impl.LoginService;
+import co.com.k4soft.clienteapijava.cliente.login.LoginService;
+import co.com.k4soft.clienteapijava.cliente.login.LoginStrategy;
 import co.com.k4soft.clienteapijava.view.ListadoActivity;
 
 

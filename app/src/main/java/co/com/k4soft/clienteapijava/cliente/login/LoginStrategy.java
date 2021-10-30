@@ -1,4 +1,4 @@
-package co.com.k4soft.clienteapijava;
+package co.com.k4soft.clienteapijava.cliente.login;
 
 public interface LoginStrategy {
 

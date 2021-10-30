@@ -9,7 +9,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -18,21 +17,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
-import co.com.k4soft.clienteapijava.PersonaStrategy;
+import co.com.k4soft.clienteapijava.cliente.persona.PersonaStrategy;
 import co.com.k4soft.clienteapijava.R;
 import co.com.k4soft.clienteapijava.adapter.PersonaBaseAdapter;
-import co.com.k4soft.clienteapijava.cliente.Service;
-import co.com.k4soft.clienteapijava.cliente.impl.LoginService;
-import co.com.k4soft.clienteapijava.cliente.persona.PersonaClient;
 import co.com.k4soft.clienteapijava.cliente.persona.PersonaService;
 import co.com.k4soft.clienteapijava.model.Persona;
-import co.com.k4soft.clienteapijava.model.TipoDocumento;
-import co.com.k4soft.clienteapijava.util.GlobalState;
-import co.com.k4soft.clienteapijava.util.ListaPersonas;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class ListadoActivity extends AppCompatActivity implements PersonaStrategy {
 
