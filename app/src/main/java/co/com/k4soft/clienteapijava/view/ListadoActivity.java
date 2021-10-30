@@ -3,12 +3,15 @@ package co.com.k4soft.clienteapijava.view;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.LiveData;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +45,7 @@ public class ListadoActivity extends AppCompatActivity implements PersonaStrateg
     EditText txtBusqueda;
     PersonaBaseAdapter personaBaseAdapter;
     PersonaService personaService;
+    FloatingActionButton fbNuevaPersona;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +74,13 @@ public class ListadoActivity extends AppCompatActivity implements PersonaStrateg
             }
         });
 
+        fbNuevaPersona.setOnClickListener(v -> {
+            abrirFormularioRegistro();
+        });
+
     }
+
+
 
     private void cargarAdapter() {
         personaBaseAdapter = new PersonaBaseAdapter(this,listaPersonas);
@@ -80,6 +90,7 @@ public class ListadoActivity extends AppCompatActivity implements PersonaStrateg
     private void initComponents() {
         listViewPersonas = findViewById(R.id.listViewPersonas);
         txtBusqueda = findViewById(R.id.txtBusqueda);
+        fbNuevaPersona = findViewById(R.id.fbNuevaPersona);
     }
 
     private void cargarPersonas() {
@@ -120,5 +131,10 @@ public class ListadoActivity extends AppCompatActivity implements PersonaStrateg
     @Override
     public void failture(String mensaje) {
 
+    }
+
+    private void abrirFormularioRegistro(){
+        Intent intent = new Intent(this, RegistroActivity.class);
+        startActivity(intent);
     }
 }
