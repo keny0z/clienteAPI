@@ -74,11 +74,9 @@ public class RegistroActivity extends AppCompatActivity implements PersonaStrate
 
     private void registrarPersona() {
         personaService= new PersonaService(this);
-        //TipoDocumento documento = crearTipoDocumento();
-        personaService.crearPersona();
-
-
-
+        TipoDocumento documento = crearTipoDocumento();
+        Persona persona = new Persona(etNumeroDocumento.getText().toString(),documento.getIdTipoDocumento(),etNombre.getText().toString(),etApellido.getText().toString(),true);
+        personaService.crearPersona(persona);
 
 
     }

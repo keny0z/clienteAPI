@@ -62,11 +62,11 @@ public class PersonaService extends RetrofitFactory {
         return data;
     }
 
-    public void crearPersona(){
+    public void crearPersona(Persona persona){
         //TipoDocumento documento =new TipoDocumento(1);
         //documento.setNombreDocumento("Cédula");
 
-        Persona persona = new Persona(9,"28293",1,"sidio","nisio",true);
+
         Retrofit retrofit = getTokenInstance();
         PersonaClient client = retrofit.create(PersonaClient.class);
         Call<Persona> respuesta =client.crearPersona(persona);

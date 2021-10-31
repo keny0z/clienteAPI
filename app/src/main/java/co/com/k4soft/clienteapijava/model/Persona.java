@@ -7,6 +7,7 @@ import lombok.Data;
 @Data
 public class Persona implements Serializable {
 
+
     private Integer idPersona;
     private String numeroDocumento;
     private Integer idTipoDocumento;
@@ -14,8 +15,8 @@ public class Persona implements Serializable {
     private String apellido;
     private boolean activo;
 
-    public Persona(Integer idPersona, String numeroDocumento, Integer idTipoDocumento, String nombre, String apellido, boolean activo) {
-        this.idPersona = idPersona;
+    public Persona(String numeroDocumento, Integer idTipoDocumento, String nombre, String apellido, boolean activo) {
+
         this.numeroDocumento = numeroDocumento;
         this.idTipoDocumento = idTipoDocumento;
         this.nombre = nombre;
