@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 import co.com.k4soft.clienteapijava.R;
 import co.com.k4soft.clienteapijava.cliente.util.RetrofitFactory;
 import co.com.k4soft.clienteapijava.model.Persona;
+import co.com.k4soft.clienteapijava.model.TipoDocumento;
 import co.com.k4soft.clienteapijava.util.Parametro;
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
@@ -59,6 +60,27 @@ public class PersonaService extends RetrofitFactory {
             }
         });
         return data;
+    }
+
+    public void crearPersona(){
+        //TipoDocumento documento =new TipoDocumento(1);
+        //documento.setNombreDocumento("Cédula");
+
+        Persona persona = new Persona(9,"28293",1,"sidio","nisio",true);
+        Retrofit retrofit = getTokenInstance();
+        PersonaClient client = retrofit.create(PersonaClient.class);
+        Call<Persona> respuesta =client.crearPersona(persona);
+        respuesta.enqueue(new Callback<Persona>() {
+            @Override
+            public void onResponse(Call<Persona> call, Response<Persona> response) {
+                Toast.makeText(context,"funciono!!!",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<Persona> call, Throwable t) {
+                Toast.makeText(context,"Falló: "+t.getMessage(),Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 

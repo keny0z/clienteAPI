@@ -42,6 +42,7 @@ public class RegistroActivity extends AppCompatActivity implements PersonaStrate
         initComponents();
         consultarDocumentos();
         ponerValoresSpinner();
+        btnRegistrar.setOnClickListener(v -> registrarPersona());
         }
 
 
@@ -71,8 +72,12 @@ public class RegistroActivity extends AppCompatActivity implements PersonaStrate
 
     }
 
-    private void consumirServicio() {
+    private void registrarPersona() {
         personaService= new PersonaService(this);
+        //TipoDocumento documento = crearTipoDocumento();
+        personaService.crearPersona();
+
+
 
 
 
@@ -115,5 +120,20 @@ public class RegistroActivity extends AppCompatActivity implements PersonaStrate
         String [] opciones = {"Cédula","Tarjeta identidad","Cédula extranjería"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.support_simple_spinner_dropdown_item,opciones);
         spTipoDocumento.setAdapter(adapter);
+    }
+    private TipoDocumento crearTipoDocumento(){
+        TipoDocumento documento = new TipoDocumento(1);
+        String documentoSeleccionado = spTipoDocumento.getSelectedItem().toString();
+        if(documentoSeleccionado.equals("Cédula")){
+            documento.setIdTipoDocumento(1);
+            documento.setNombreDocumento("Cédula");
+        }else if(documentoSeleccionado.equals("Tarjeta identidad")){
+            documento.setIdTipoDocumento(2);
+            documento.setNombreDocumento("Tarjeta identidad");
+        }else if(documentoSeleccionado.equals("Cédula extranjería")){
+            documento.setIdTipoDocumento(3);
+            documento.setNombreDocumento("Cédula extranjería");
+        }
+        return documento;
     }
 }
