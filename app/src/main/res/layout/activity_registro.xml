@@ -41,19 +41,9 @@
         android:ems="10"
         android:hint="Numero de documento"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/etTipoDocumento"
-        app:layout_constraintStart_toStartOf="@+id/etTipoDocumento"
-        app:layout_constraintTop_toBottomOf="@+id/etTipoDocumento" />
-
-    <EditText
-        android:id="@+id/etTipoDocumento"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="Tipo de documento"
-        app:layout_constraintEnd_toEndOf="@+id/etApellido"
-        app:layout_constraintStart_toStartOf="@+id/etApellido"
-        app:layout_constraintTop_toBottomOf="@+id/etApellido" />
+        app:layout_constraintEnd_toEndOf="@+id/spTipoDocumento"
+        app:layout_constraintStart_toStartOf="@+id/spTipoDocumento"
+        app:layout_constraintTop_toBottomOf="@+id/spTipoDocumento" />
 
     <TextView
         android:id="@+id/txtRegistro"
@@ -71,13 +61,20 @@
         android:id="@+id/btnRegistrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
         android:text="Registrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNumeroDocumento"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spTipoDocumento"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/etApellido"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/etApellido"
+        app:layout_constraintTop_toBottomOf="@+id/etApellido" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,6 +22,7 @@ public class ActualizarActivity extends AppCompatActivity {
 
 
     }
+
     private void initComponents(){
         txtNombre = findViewById(R.id.txtNombre);
         persona = (Persona) getIntent().getExtras().getSerializable("persona");

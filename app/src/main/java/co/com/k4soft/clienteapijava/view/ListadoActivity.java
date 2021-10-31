@@ -65,6 +65,7 @@ public class ListadoActivity extends AppCompatActivity implements PersonaStrateg
             }
         });
 
+
         fbNuevaPersona.setOnClickListener(v -> {
             abrirFormularioRegistro();
         });
