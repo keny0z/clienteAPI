@@ -1,7 +1,6 @@
 package co.com.k4soft.clienteapijava.view;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.LiveData;
 
 import co.com.k4soft.clienteapijava.cliente.documento.DocumentoService;
 import co.com.k4soft.clienteapijava.cliente.persona.PersonaStrategy;
@@ -15,7 +14,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +50,7 @@ public class RegistroActivity extends AppCompatActivity implements PersonaStrate
         etApellido = findViewById(R.id.etApellido);
         spTipoDocumento = findViewById(R.id.spTipoDocumento);
         etNumeroDocumento = findViewById(R.id.etNumeroDocumento);
-        btnRegistrar = findViewById(R.id.btnRegistrar);
+        btnRegistrar = findViewById(R.id.btnActualizar);
 
 
     }

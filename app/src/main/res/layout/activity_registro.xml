@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtRegistro" />
+        app:layout_constraintTop_toBottomOf="@+id/txtActualizar" />
 
     <EditText
         android:id="@+id/etApellido"
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spTipoDocumento" />
 
     <TextView
-        android:id="@+id/txtRegistro"
+        android:id="@+id/txtActualizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnRegistrar"
+        android:id="@+id/btnActualizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"

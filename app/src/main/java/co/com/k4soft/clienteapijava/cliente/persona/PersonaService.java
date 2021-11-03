@@ -83,6 +83,27 @@ public class PersonaService extends RetrofitFactory {
         });
     }
 
+    public void eliminarPersona(Persona persona){
+        //TipoDocumento documento =new TipoDocumento(1);
+        //documento.setNombreDocumento("Cédula");
+
+
+        Retrofit retrofit = getTokenInstance();
+        PersonaClient client = retrofit.create(PersonaClient.class);
+        Call<Persona> respuesta =client.eliminarPersona(persona.getIdPersona());
+        respuesta.enqueue(new Callback<Persona>() {
+            @Override
+            public void onResponse(Call<Persona> call, Response<Persona> response) {
+                Toast.makeText(context,"Persona eliminada correctamente",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<Persona> call, Throwable t) {
+                Toast.makeText(context,"Falló: "+t.getMessage(),Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
 
 
 
